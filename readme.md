@@ -23,6 +23,9 @@ frist to git
     1）git remote -v(查看远程库信息)
     2）git remote rm origin（解除与远程库链接，删除远程库需要在github上操作）
 17.克隆远程库：git clone https://github.com/mengfan525/git.git
-18.创建分支：git checkout -v dev(创建dev分支并切换到dev分支)
+18.创建分支：git checkout -v dev(创建dev分支并切换到dev分支) / git switch -c dev
     git branch dev(创建dev分支) : git checkout dev(切换到dev分支)
 19.查看分支：git branch
+20.切换分支：git switch master /  git checkout dev
+21.合并分支：git merge dev(将dev分支合并到当前分支)
+22.删除分支：git branch -d dev
