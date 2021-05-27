@@ -11,3 +11,14 @@ frist to git
 10.对比：git diff（默认工作区与暂存对比），git diff HEAD(工作区与版本库对比)
 11.丢弃工作区修改：git restore file(readme.md)
 12.丢弃暂存区修改：git reset HEAD <file> / git restore --staged readme.txt
+13.工作区删除：rm test.txt
+14.版本库删除：git rm test.txt(暂存区) -> git commit -m "remove test.txt"
+15.与github链接（ssh）：
+    1）ssh-keygen -t rsa -C "youremail@example.com"（创建ssh key）
+    2）cd .ssh ->code id_rsa.pub(公匙)
+    3)在git中创建新的仓库
+    4）git remote add origin https://github.com/mengfan525/tencent_linux.git（将git仓库与本地仓库相连）
+    5)git push -u origin master(将当前分支master上传到github,-u是第一次将本地与远程的master关联)
+16.断开与远程库链接：
+    1）git remote -v(查看远程库信息)
+    2）git remote rm origin（解除与远程库链接，删除远程库需要在github上操作）
