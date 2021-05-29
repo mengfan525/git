@@ -1,3 +1,10 @@
 1.出现error: failed to push some refs to问题
     1）因为远程库与本地库不一致造成的，那么我们把远程库同步到本地库就可以了
     2）git pull --rebase origin master（将远程库的更新合并到本地库中，将本地库更改的内容接到更新后的版本库）
+2.出现fatal: 当前分支 dev 没有对应的上游分支。
+    1)当前分支没有与远程库的分支进行关联
+    2）git push --set-upstream origin dev（为推送当前分支并建立与远程上游的跟踪）
+3.There is no tracking information for the current branch.
+    1）当前分支没有追踪信息
+    2）git branch --set-upstream-to=origin/dev dev（分支 'dev' 设置为跟踪来自 'origin' 的远程分支 'dev'）
+    
