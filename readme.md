@@ -58,4 +58,7 @@ frist to git
     1）新的伙伴加入:git clone ...(配置好ssh之后)
     2）当前只能看到master分支，要在dev分支上开发还需要将远程的dev分支拉到本地
     3）git switch -c dev origin/dev
-    4) 
+    4) 在dev分支上修改，提交文件
+    5）碰巧别人也对的dev分支文件做了修改，并试图推送
+    6)git pull(本地分支没有与远程做链接)->git branch --set-upstream-to=origin/dev dev(做链接) 
+    7)git pull(提示合并有冲突，需要手动解决)
