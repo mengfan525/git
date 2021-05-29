@@ -53,4 +53,9 @@ frist to git
             ③git cherry-pick 有点迷惑，总是提示冲突，之后可以再试试。(先执行这个操作，在stash取出内容)
 26.强制删除:当我们所在分支编写的文件不在需要，又没有添加到版本库->git branch -D dev (强制删除)
 27.远程库： git remote -v (查看远程库信息)
-28.推送分支： git push origin dev（推送到远程库的dev分支）
+28.推送分支：git push origin dev（推送到远程库的dev分支）
+29.多人协作抓取分支：这里存在master与dev分支
+    1）新的伙伴加入:git clone ...(配置好ssh之后)
+    2）当前只能看到master分支，要在dev分支上开发还需要将远程的dev分支拉到本地
+    3）git switch -c dev origin/dev
+    4) 
