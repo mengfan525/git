@@ -30,3 +30,5 @@ frist to git
 21.合并分支：git merge dev(将dev分支合并到当前分支)
 22.删除分支：git branch -d dev
 23.分支冲突：当两个分支在同一个地方做了不同的更改，不能自动合并。需要我们手动将内容更改到最新版。
+            git log --graph --pretty=oneline --abbrev-commit(查看分支冲突)
+24.分支管理策略：
