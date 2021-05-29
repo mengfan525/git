@@ -34,4 +34,20 @@ frist to git
 24.分支管理策略：
     fast forward模式：git merge dev(会丢失掉dev的分支信息)
     禁止fast for模式：git merge --no-f -m "no-f" dev(dev的分支信息存在并用-m做说明)
-
+25.Bug:当我们存在master与dev分支后，现在还需要一个bug分支来更改bug时
+    1）git status（查看当前工作分支dev的状态，存在未提交的修改内容，但是工作未完成无法提交）
+    2）git stash （将当前工作现场储存起来，等以后恢复现场使用）（执行操作后当前分支状态未未更改状态）
+    3）git switch master（切换分支到master）
+    4）git switch -c issue-101（在master的基础上添加issue-101分支并切换）
+    5）在issue分支上更改bug并提交。
+    6）git switch master
+    7）git merge --no-f -m "merged bug fix 101" issue-101(将issue-101分支与master合并并保留合并信息)
+    8）git switch dev
+    9）git stash list(查看之前保存的保存工作状态)
+    10）git stash pop（恢复之前的工作状态并删除stash上的状态）= git stash apply（回复）+ git stash drop（删除）
+    11）git stash可以保存多次状态，用git stash list查看后可以用git stash apply stash@{n}来选择恢复成哪一个
+    12）当我们将master上的bug修改后，dev也是从master分支过来的要怎么更改
+    13）git cherry-pick 209e846(在dev分支上执行此操作，提交改bug提交的commit文件信息，即可复制之前更改好的内容)
+    14）说明: ①当两个分支的工作区都存在更改内容时，我们不能执行更改分支操作。这是因为我们的工作区、暂存区是公用的。
+            ②若是不这么操作，也可将未完成的内容执行add/commit操作后在新建分支bug操作（不太建议将未完成的提交）
+            ③bug
