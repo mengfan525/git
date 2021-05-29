@@ -1,1 +1,3 @@
-1.chongtu
+1.出现error: failed to push some refs to问题
+    1）因为远程库与本地库不一致造成的，那么我们把远程库同步到本地库就可以了
+    2）git pull --rebase origin master（将远程库的更新合并到本地库中，将本地库更改的内容接到更新后的版本库）
