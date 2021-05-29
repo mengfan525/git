@@ -32,4 +32,6 @@ frist to git
 23.分支冲突：当两个分支在同一个地方做了不同的更改，不能自动合并。需要我们手动将内容更改到最新版。
             git log --graph --pretty=oneline --abbrev-commit(查看分支冲突)
 24.分支管理策略：
-25.djjfj
+    fast forward模式：git merge dev(会丢失掉dev的分支信息)
+    禁止fast for模式：git merge --no-f -m "no-f" dev(dev的分支信息存在并用-m做说明)
+
