@@ -29,3 +29,4 @@ frist to git
 20.切换分支：git switch master /  git checkout dev
 21.合并分支：git merge dev(将dev分支合并到当前分支)
 22.删除分支：git branch -d dev
+23.分支哎突
