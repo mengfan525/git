@@ -62,3 +62,31 @@ frist to git
     5）碰巧别人也对的dev分支文件做了修改，并试图推送
     6)git pull(本地分支没有与远程做链接)->git branch --set-upstream-to=origin/dev dev(做链接) 
     7)git pull(提示合并有冲突，需要手动解决)
+30.标签管理 
+    1）切换到需要打标签的分支
+    2）git tag v1.0（即可在当前分支打上标签）
+    3）要是需要在之前提交的打上标签
+    4）git log --pretty=oneline --abbrev-commit(查找历史提交的id)
+    5)git tag v1.0 008d0f3(将008d0f3的commit版本打上标签v1.0)
+    6)git tag（查看所打的标签）
+    7)git show v1.0(查看标签的的详细信息)
+    8)$ git tag -a v0.1 -m "version 1.0 released" 008d0f3(也可以在打标签的时候同添加说明)
+    9)git tag -d v1.0(删除标签)（在本地未推送到远程）
+    10）git push origin <tagname>（推送某个标签到远程）
+    11）git push origin --tags（一次性推送所有标签到远程）
+    12）删除推送到远程的标签
+    13）git tag -d v1.0（删除本地标签）-> git push origin :refs/tags/v1.0(删除远程标签)
+31.忽略特殊文件：
+    1）忽略特殊文件->在git工作区目录下新建.gitignore文件
+    2）https://github.com/github/gitignore 中有写好的一些文件可以参考
+    3）*.o就是忽略所有.o结尾的文件；!test.o就是不忽略test.o文件
+    4）提交.gitignore文件到远程库。
+    5）git add -f App.class（强制提交文件，若是文件在忽略范围内）
+    6）git check-ignore -v App.class（检查文件在.gitignore中哪里被忽略了）
+32.设置别名：
+    1）有的时候命令太长难免打错，可以将命令设置别名。
+    2）git config --global alias.st status(将status的别名设置成st)
+    3）git config --global alias.chongtu "log --graph --pretty=oneline --abbrev-commit"
+    4)当前git工作区配置好的文件放在.git/config中，也可以打开在里面直接设置或者删除
+    5）当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中
+33.搭建git服务器
