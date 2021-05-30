@@ -7,4 +7,5 @@
 3.There is no tracking information for the current branch.
     1）当前分支没有追踪信息
     2）git branch --set-upstream-to=origin/dev dev（分支 'dev' 设置为跟踪来自 'origin' 的远程分支 'dev'）
+4)主目录下没有.gitconfig,使用ls -al可以显示（ls -l不行）
     
